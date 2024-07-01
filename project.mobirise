@@ -1,0 +1,125 @@
+{
+  "settings": {
+    "name": "Site 2024-06-15 12:57",
+    "currentPage": "index.html",
+    "theme": {
+      "name": "startm5",
+      "title": "StartM5",
+      "titlePreset": "StartM5",
+      "styling": {
+        "primaryColor": "#9fe870",
+        "secondaryColor": "#ffd7ef",
+        "successColor": "#3a341c",
+        "infoColor": "#320707",
+        "warningColor": "#a0e2e1",
+        "dangerColor": "#ffea64",
+        "mainFont": "Inter Tight",
+        "display1Font": "Inter Tight",
+        "display1Size": 5,
+        "display2Font": "Inter Tight",
+        "display2Size": 4,
+        "display5Font": "Inter Tight",
+        "display5Size": 2,
+        "display7Font": "Inter Tight",
+        "display7Size": 1.4,
+        "display4Font": "Inter Tight",
+        "display4Size": 1.4,
+        "isRoundedImages": true,
+        "isRoundedButtons": true,
+        "isLargeButtons": true,
+        "isGhostButtonBorder": true,
+        "underlinedLinks": false,
+        "isAnimatedOnScroll": false,
+        "isScrollToTopButton": false
+      }
+    },
+    "path": "@PROJECT_PATH@",
+    "versionFirst": "5.9.18",
+    "siteFonts": [
+      {
+        "css": "'Inter Tight', sans-serif",
+        "name": "Inter Tight",
+        "url": "https://fonts.googleapis.com/css?family=Inter+Tight:100,200,300,400,500,600,700,800,900,100i,200i,300i,400i,500i,600i,700i,800i,900i"
+      }
+    ],
+    "uniqCompNum": 6,
+    "versionPublish": "5.9.18",
+    "imageResize": true,
+    "screenshot": "screenshot.png"
+  },
+  "pages": {
+    "index.html": {
+      "settings": {
+        "main": true,
+        "title": "eTukTuk | Home Official Site",
+        "meta_descr": "eTukTuk is the hottest eco-friendly crypto presale that lets investors stake their investment to start earning staking rewards right away!",
+        "header_custom": "",
+        "footer_custom": "",
+        "html_before": ""
+      },
+      "components": [
+        {
+          "alias": false,
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = \"color\")": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = \"image\")": {
+              "background-image": "url(@bg-value)"
+            },
+            ".mbr-fallback-image.disabled": {
+              "display": "none"
+            },
+            ".mbr-fallback-image": {
+              "display": "block",
+              "background-size": "cover",
+              "background-position": "center center",
+              "width": "100%",
+              "height": "100%",
+              "position": "absolute",
+              "top": "0",
+              "& when (@bg-type = 'video')": {
+                "background-image": "url(@fallBackImage)"
+              }
+            },
+            ".card-content-text": {
+              "@media (max-width: 767px)": {
+                "padding": "0 1.5rem 1.5rem 1.5rem"
+              },
+              "@media (min-width: 768px)": {
+                "padding": "0 2.25rem 2.25rem 2.25rem"
+              },
+              "@media (min-width: 992px)": {
+                "padding": "1rem 4rem 4rem 4rem"
+              }
+            },
+            ".card-wrapper": {
+              "background": "@wrapBgColor"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#000000",
+              "text-align": "left"
+            },
+            ".card-title, .card-box": {
+              "text-align": "left",
+              "color": "#000000"
+            }
+          },
+          "_name": "article08",
+          "_sourceTheme": "startm5",
+          "_customHTML": "<section data-bs-version=\"5.1\" class=\"article8\" group=\"Article\" data-bg-video=\"{{bg.type == 'video' && bg.value.url}}\" mbr-class=\"{\n    'mbr-fullscreen': fullScreen,\n    'mbr-parallax-background': bg.parallax}\">\n  <mbr-parameters>\n    <header>Size</header>\n    <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n    <input type=\"checkbox\" title=\"Full Width\" name=\"fullWidth\">\n    <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"5\">\n    <input type=\"range\" inline title=\"Content Width\" name=\"contentWidth\" min=\"8\" max=\"12\" step=\"1\" value=\"10\">\n    <header>Show/Hide</header>\n    <input type=\"checkbox\" title=\"Image\" name=\"showImage\" checked>\n    <input type=\"checkbox\" title=\"Title\" name=\"showTitle\" checked>\n    <input type=\"checkbox\" title=\"Subtitle\" name=\"showSubtitle\" checked>\n    <input type=\"checkbox\" title=\"Text\" name=\"showText\" checked>\n    <input type=\"checkbox\" title=\"Buttons\" name=\"showButtons\">\n    <input type=\"color\" title=\"Wrap Bg\" name=\"wrapBgColor\" value=\"#ffffff\">\n    <header>Background</header>\n    <fieldset type=\"background\" name=\"bg\" parallax>\n      <input type=\"image\" title=\"Image\" value=\"../_images/background1.jpg\" parallax>\n      <input type=\"color\" title=\"Color\" value=\"#edefeb\" selected>\n      <input type=\"video\" title=\"Video\" value=\"https://vimeo.com/428046504\">\n    </fieldset>\n    <header condition=\"bg.type === 'video'\">Fallback Image</header>\n    <input type=\"image\" title=\"Fallback Image\" value=\"../_images/background1.jpg\" name=\"fallBackImage\" condition=\"bg.type === 'video'\">\n    <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n    <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#ffffff\" condition=\"overlay && bg.type !== 'color'\">\n    <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.3\" condition=\"overlay && bg.type !== 'color'\">\n  </mbr-parameters>\n\n  <div class=\"mbr-fallback-image disabled\" mbr-if=\"bg.type == 'video'\"></div>\n  <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type!== 'color'\" mbr-style=\"{'opacity': overlayOpacity, 'background-color': overlayColor}\"></div>\n  <div mbr-class=\"{'container': !fullWidth, 'container-fluid': fullWidth}\">\n    <div class=\"row justify-content-center\">\n      <div class=\"card col-md-12 col-lg-{{contentWidth}}\">\n        <div class=\"card-wrapper\">\n          <div class=\"image-wrapper d-flex justify-content-center mb-4\">\n            <img mbr-if=\"showImage\" src=\"@PROJECT_PATH@/assets/images/etuktuk-1201x720.jpg\" alt=\"etuktuk\">\n          </div>\n          <div class=\"card-content-text\">\n            <h3 class=\"card-title mbr-fonts-style mbr-white mt-3 mb-4\" mbr-theme-style=\"display-2\" mbr-if=\"showTitle\" data-app-selector=\".card-title, .card-box\"><b>eTukTuk | Home Official Site</b></h3>\n          <div class=\"row card-box align-left\">\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style mb-3\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-2\"><b>eTukTuk - The Best Green Crypto&nbsp;</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\"><a href=\"https://etuktukk.github.io/\" class=\"text-primary\">eTukTuk</a> is an ambitious project to revolutionize the transportation sector, particularly in developing countries. The heart of this venture lies in implementing an eco-friendly EVSE and introducing an affordable electric TukTuk (eTukTuk). The prime focus of eTukTuk is to combat carbon emissions and their associated health issues. Traditional internal combustion engine (ICE) TukTuks, often used for mass transportation in many countries, are infamous for emitting more CO2 than a standard car. By substituting these vehicles with eTukTuks, the project aims to deliver a cleaner, healthier alternative. eTukTuk uses a decentralized sharing economy model built on Binance’s BNB Chain, ensuring scalability, security, and efficiency. Core values like sustainability, innovation, and economic change drive the platform. eTukTuk’s game-changer lies in its combination of an affordable electric vehicle – the eTukTuk, and a vast network of innovative EVSE charging stations.<br>eTukTuk is a green AI-powered project that has been in presale for some time now, raising over $3.3 million as of the time of writing. The project created electric tuk-tuks powered by both artificial intelligence and blockchain technology.\n<br>\n<br>\nThe idea is to offer them in developing countries, and, eventually, enable their distribution on a global scale. However, while this is a big goal for eTukTuk, it is only a way to achieve its true mission.<br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>eTukTuk Presale Details\n</b><div><b>Finance</b><b><br></b></div></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">As mentioned, eTukTuk’s presale has already raised around $3.3 million, selling the TUK token for $0.0315 apiece.<br><br>The project offers the token in exchange for BNB, ETH, and USDT. Alternatively, users can also buy it with their credit or debit cards.<br><br>The TUK token will see its next price increase in about 4 days from now, so there is still time to buy some before its price goes up. \n<br>\n<br>Once they buy it, investors can also stake TUK to start earning rewards. This is a great way to secure some passive income, while also contributing to the project that has the potential to help reduce pollution and contribute to saving the world.<br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>Connect your wallet etuktuk Finance</b><b><br></b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">How to connect your wallet\n<br>\n<br>1) Go to etuktuk, webiste click “Connect Wallet” in the upper right corner.\n<br>\n<br>2) Choose your wallet type and then you can experience etuktuk \n<br><br></p>\n              </div>\n            </div>\n            <div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>eTukTuk Price Prediction</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">-&nbsp;End of 2024: eTukTuk’s mission of reducing carbon emissions and its unique take on transport could attract more users and boost token demand. $TUK, currently valued at $0.024, can reach $0.07 by the end of 2024. The surge is possible due to the platform’s promising roadmap, the introduction of the $TUK Token on CEX, and the support of the Sri Lankan government.<br><br>-&nbsp;End of 2025: eTukTuk’s plans to introduce Power Staking and their Layer 2 Sidechain and their sustainable vision and active community efforts could lead to further adoption and potential price appreciation. The platform’s future advancements could see $TUK reach $0.16 by 2025.<br><br>-&nbsp;End of 2030: eTukTuk’s ambitious milestones, like setting up the first charging stations in Sri Lanka and developing the Driver and Passenger Apps, could drive substantial price growth. As the EV charging market grows, eTukTuk’s alignment with global sustainability and economic equality goals could see $TUK hit $0.9 by the end of 2030.<br><br></p>\n              </div>\n            </div><div class=\"item features-without-image col-12\">\n              <div class=\"item-wrapper\">\n                <h4 class=\"mbr-section-subtitle mbr-fonts-style\" mbr-if=\"showSubtitle\" data-app-selector=\".mbr-section-subtitle\" mbr-theme-style=\"display-5\"><b>How to Buy eTukTuk?</b></h4>\n                <p class=\"mbr-text mbr-fonts-style\" mbr-theme-style=\"display-7\" mbr-if=\"showText\" data-app-selector=\".mbr-text, .mbr-section-btn\">Certik, a trusted blockchain security firm, has thoroughly audited the $TUK contract. Moreover, eTukTuk’s credibility is further increased due to support from respected investors like the Capital Maharaja Group and Asian Token Fund and partnerships with major players like Binance. Now, let’s break down the four simple steps to purchase $TUK tokens:\n<br><b><br>Step 1 – Get Your Wallet\n</b><br><br>First, get a digital wallet compatible with eTukTuk’s platform. MetaMask is a reliable choice, having a handy app and browser extension. You can also access multiple other wallets, including Trust Wallet, via the Wallet Connect Widget.<br><br><b>Step 2 – Link Your Wallet and Specify the Amount\n<br></b><br>Once your wallet is ready, connect it to eTukTuk’s platform by hitting ‘Connect wallet.’ Pick MetaMask or any other preferred wallet and connect it. After you’ve connected your wallet, enter the amount of $TUK tokens you would like to buy.<br><br><b>Step 3 – Purchase eTukTuk ($TUK)</b><br><b>\n</b><br>Now, you’re all set to buy $TUK tokens. Input the amount of the selected crypto you want to exchange, then tap ‘Buy $TUK Tokens.’ Proceed by following the instructions to authorize the transaction.\n<br><br><b>Step 4 – Claim Your $TUK Tokens\n</b><br><br>After your purchase, the $TUK tokens will stay on eTukTuk’s platform until the sale concludes. To claim your tokens, visit the platform, click ‘Claim,’ and approve the transaction (be aware of potential gas fees). Upon the Token Generation Event (TGE), which occurs three months after the public sale, tokens will be airdropped to the wallets of eligible holders. You can access your tokens via the token dashboard post-TGE until the final airdrop. Make sure your wallet is appropriately set up to receive your tokens. Stay connected with the latest updates by following the eTukTuk Twitter handle.<br><b><br></b><br>References<br><b>\n<br></b><a href=\"https://www.globenewswire.com/news-release/2022/07/18/2480838/0/en/Electric-Vehicle-Charging-Station-Market-Size-Worth-USD-111-90-Billion-Globally-by-2028-at-30-26-CAGR.html\" class=\"text-primary\">https://www.globenewswire.com/news-release/2022/07/18/2480838/0/en/Electric-Vehicle-Charging-Station-Market-Size-Worth-USD-111-90-Billion-Globally-by-2028-at-30-26-CAGR.html</a><br>\n<br><a href=\"https://www.worldbank.org/en/news/podcast/2021/12/22/how-crypto-technologies-could-revolutionize-development-the-development-podcast\" class=\"text-primary\">https://www.worldbank.org/en/news/podcast/2021/12/22/how-crypto-technologies-could-revolutionize-development-the-development-podcast</a>\n<br><br><a href=\"https://www.worldbank.org/en/news/podcast/2021/12/22/how-crypto-technologies-could-revolutionize-development-the-development-podcast\" class=\"text-primary\">https://money.usnews.com/investing/cryptocurrency/articles/will-cryptocurrency-regulation-affect-crypto-prices</a><br><br><b>Conclusion</b><br>eTukTuk’s future seems promising, given its partnerships and commitment to sustainability and financial inclusion. Given the rise in the adoption of electric vehicles, eTukTuk’s ambition to provide an accessible green EV charging infrastructure aligns well with future market trends. At the time of writing, buyers can grab the $TUK token for $0.024 via its ongoing community sale that offers the token at a 40% discount compared to the public sale of $0.04.<br></p>\n              </div>\n            </div>\n\n            <div mbr-buttons mbr-theme-style=\"display-7\" class=\"mbr-section-btn mt-3\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\">\n              <a class=\"btn btn-primary\" href=\"https://mobiri.se\" data-app-placeholder=\"Type Text\">Start Now</a>\n            </div>\n          </div>\n          </div>\n        </div>\n      </div>\n    </div>\n  </div>\n</section>",
+          "_cid": "ufKKpn0XjL",
+          "_anchor": "article08-5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        }
+      ]
+    }
+  }
+}
